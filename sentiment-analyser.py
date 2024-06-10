@@ -14,17 +14,19 @@ from textblob import TextBlob
 
 
 st.title("Sentiment Analysis WebApp.")  
-t = st.text_area("Please Enter your Sentences!") 
+st.write('Welcome to my sentiment analysis app!')
+message = st.text_area('Enter your sentence here')
 
 
 # In[27]:
 
 
 if st.button("Analyze the Sentiment"):
-    blob = TextBlob(message)
-    result = blob.sentiment
-    plrty = result.polarity
-    subjty = result.subjectivity
+    if message:
+        blob = TextBlob(message)
+        result = blob.sentiment
+        plrty = result.polarity
+        subjty = result.subjectivity
 
     if plrty < 0:
         st.warning("The given text has negative sentiments associated with it: " + str(plrty))
