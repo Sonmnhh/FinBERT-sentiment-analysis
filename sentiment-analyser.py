@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
-
-
-pip install streamlit
-
-
-# In[18]:
-
-
-pip install -U textblob
 
 
 # In[19]:
