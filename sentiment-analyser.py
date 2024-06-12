@@ -88,16 +88,14 @@ if st.button("Analyze the Sentiment"):
         subjty = result.subjectivity
         sentiment = "Neutral"
 
-    if plrty < 0:
-        sentiment = "Negative"
-        st.warning("The given text has negative sentiments associated with it: " + str(plrty))
-
-    elif plrty > 0:
-        sentiment = "Positive"
-        st.success("The given text has positive sentiments associated with it: " + str(plrty))
-
-    else:
-        st.info("The given text has neutral sentiments associated with it: " + str(plrty))
+        if plrty < 0:
+            sentiment = "Negative"
+            st.warning("The given text has negative sentiments associated with it: " + str(plrty))
+        elif plrty > 0:
+            sentiment = "Positive"
+            st.success("The given text has positive sentiments associated with it: " + str(plrty))
+        else:
+            st.info("The given text has neutral sentiments associated with it: " + str(plrty))
         
         # Append result to the session state
         st.session_state.sentiment_results.append({"No.": len(st.session_state.sentiment_results) + 1, "Text": message, "Sentiment": sentiment})
