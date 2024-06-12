@@ -15,19 +15,6 @@ from textblob import TextBlob
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "News", "Contact Me"])
 
-# News Page
-elif page == "News":
-    st.title("News")
-    st.write("Latest news will be displayed here.")
-    # Add content for the News page
-
-# Contact Me Page
-elif page == "Contact Me":
-    st.title("Contact Me")
-    st.write("Feel free to reach out to me!")
-    st.write("Email: group3@vnu.edu.vn")
-    st.write("Phone: +84989448036")
-    # Add more contact information as needed
 
 # Add custom CSS for styling
 st.markdown(
