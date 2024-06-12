@@ -89,9 +89,11 @@ if st.button("Analyze the Sentiment"):
         sentiment = "Neutral"
 
     if plrty < 0:
+        sentiment = "Negative"
         st.warning("The given text has negative sentiments associated with it: " + str(plrty))
 
     elif plrty > 0:
+        sentiment = "Positive"
         st.success("The given text has positive sentiments associated with it: " + str(plrty))
 
     else:
