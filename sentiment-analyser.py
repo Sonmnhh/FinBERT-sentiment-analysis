@@ -69,7 +69,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+if 'sentiment_results' not in st.session_state:
+    st.session_state.sentiment_results = []
+        
 st.title("Financial Sentiment Analysis WebApp.")  
 st.write('Welcome to my sentiment analysis app!')
 message = st.text_area('Enter your sentence here')
