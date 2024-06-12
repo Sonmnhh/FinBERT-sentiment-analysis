@@ -16,7 +16,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f7f7f7;
+        background-color: #ffffff;
         font-family: 'Arial', sans-serif;
     }
     .main {
@@ -26,7 +26,14 @@ st.markdown(
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     h1 {
-        color: #4a4a4a;
+        color: #333333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    p {
+        color: #666666;
+        text-align: center;
+        font-size: 18px;
     }
     input {
         width: 100%;
@@ -47,6 +54,12 @@ st.markdown(
     }
     .stButton button:hover {
         background-color: #45a049;
+    }
+    .decorative {
+        background-image: url('https://www.transparenttextures.com/patterns/white-waves.png');
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     </style>
     """,
