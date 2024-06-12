@@ -84,6 +84,7 @@ if st.button("Analyze the Sentiment"):
         result = blob.sentiment
         plrty = result.polarity
         subjty = result.subjectivity
+        sentiment = "Neutral"
 
     if plrty < 0:
         st.warning("The given text has negative sentiments associated with it: " + str(plrty))
