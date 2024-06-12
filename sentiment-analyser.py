@@ -99,6 +99,10 @@ if st.button("Analyze the Sentiment"):
 
 
 # In[28]:
+        # Append result to the session state
+        st.session_state.sentiment_results.append({"No.": len(st.session_state.sentiment_results) + 1, "Text": message, "Sentiment": sentiment})
+        st.success(result)
+
 # Display results table
 if st.session_state.sentiment_results:
     st.subheader("Analyzed Sentiments")
