@@ -12,7 +12,7 @@ from textblob import TextBlob
 
 # In[20]:
 # Sidebar navigation
-st.sidebar.title("Navigation")
+st.sidebar.title("For Financial")
 page = st.sidebar.radio("Go to", ["Home", "News", "Contact Me"])
 
 
