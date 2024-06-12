@@ -8,7 +8,7 @@
 
 import streamlit as st  
 from textblob import TextBlob 
-
+import pandas as pd
 
 # In[20]:
 # Sidebar navigation
@@ -98,8 +98,12 @@ if st.button("Analyze the Sentiment"):
     st.success(result)  
 
 
-# In[ ]:
-
+# In[28]:
+# Display results table
+if st.session_state.sentiment_results:
+    st.subheader("Analyzed Sentiments")
+    results_df = pd.DataFrame(st.session_state.sentiment_results)
+    st.table(results_df)
 
 
 
