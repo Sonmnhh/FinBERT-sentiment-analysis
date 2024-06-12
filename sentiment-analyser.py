@@ -15,7 +15,20 @@ from textblob import TextBlob
 st.sidebar.title("For Financial")
 page = st.sidebar.radio("Go to", ["Home", "News", "Contact Me"])
 
+# Placeholder for sentiment results
+if 'sentiment_results' not in st.session_state:
+    st.session_state.sentiment_results = []
 
+# Function to analyze sentiment (placeholder function)
+def analyze_sentiment(text):
+    # Placeholder sentiment analysis
+    if 'good' in text.lower():
+        return 'Positive'
+    elif 'bad' in text.lower():
+        return 'Negative'
+    else:
+        return 'Neutral'
+        
 # Add custom CSS for styling
 st.markdown(
     """
