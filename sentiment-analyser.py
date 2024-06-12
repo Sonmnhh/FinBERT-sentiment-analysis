@@ -53,7 +53,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Sentiment Analysis WebApp.")  
+st.title("Financial Sentiment Analysis WebApp.")  
 st.write('Welcome to my sentiment analysis app!')
 message = st.text_area('Enter your sentence here')
 
