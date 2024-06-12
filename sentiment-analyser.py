@@ -93,12 +93,7 @@ if st.button("Analyze the Sentiment"):
 
     else:
         st.info("The given text has neutral sentiments associated with it: " + str(plrty))
-
-
-    st.success(result)  
-
-
-# In[28]:
+        
         # Append result to the session state
         st.session_state.sentiment_results.append({"No.": len(st.session_state.sentiment_results) + 1, "Text": message, "Sentiment": sentiment})
         st.success(result)
@@ -108,6 +103,9 @@ if st.session_state.sentiment_results:
     st.subheader("Analyzed Sentiments")
     results_df = pd.DataFrame(st.session_state.sentiment_results)
     st.table(results_df)
+
+# In[28]:
+
 
 
 
